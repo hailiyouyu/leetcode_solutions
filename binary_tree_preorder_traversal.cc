@@ -4,7 +4,7 @@ public:
 	vector<int> data;
 	if (!root)
 	    return data;
-	stack<int> nodes;
+	stack<TreeNode *> nodes;
 	nodes.push(root);
 
 	while (!nodes.empty()) {
