@@ -25,6 +25,6 @@ public:
 	    nodes.pop();
 	    data.push_back(pNode->val);
 	}
-	return pNode;
+	return data;
     }
 };
