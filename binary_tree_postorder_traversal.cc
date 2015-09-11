@@ -46,12 +46,13 @@ public:
                 if (node.second) {
                     node.second = false;
                     nodes.push(node);
-                    root = node.left->right;
+                    root = node.first->right;
                 } else {
-                    data.push_back(node.left->val);
+                    data.push_back(node.first->val);
                     root = nullptr;
                 }
             }
         }
+        return data;
     }
 };
