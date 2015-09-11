@@ -30,8 +30,10 @@ public:
                     nodes.push(node);
                     root = node.first->right;
                 } else {
-                    if (!node.first->left && !node.first->right)
-                        depth = max(depth, nodes.size()+1);
+                    if (!node.first->left && !node.first->right) {
+                        int tempDepth = nodes.size() + 1;
+                        depth = max(depth, tempDepth);
+                    }
                     root = nullptr;
                 }
             }
