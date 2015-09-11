@@ -3,7 +3,7 @@ class Solution {
         if (!root)
             return 0;
         stack<pair<TreeNode *, bool>> nodes;
-        int depth = 0;
+        int depth = INT_MAX;
         
         while (root || !nodes.empty()) {
             if (root) {
@@ -26,5 +26,6 @@ class Solution {
                 }
             }
         }
+        return depth;
     }
 };
