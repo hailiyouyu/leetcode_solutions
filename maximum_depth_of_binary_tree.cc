@@ -38,5 +38,6 @@ public:
                 }
             }
         }
+        return depth;
     }
 };
