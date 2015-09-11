@@ -18,7 +18,7 @@ class Solution {
                     nodes.push(node);
                     root = node.first->right;
                 } else {
-                    if (!node.first->left && !node.first->second) {
+                    if (!node.first->left && !node.first->right) {
                         int tempDepth = nodes.size() + 1;
                         depth = min(depth, tempDepth);
                     }
