@@ -41,3 +41,30 @@ public:
         return depth;
     }
 };
+
+/* BFS-solution */
+class Solution3 {
+    int maxDepth(TreeNode *root) {
+        if (!root)
+            return 0;
+        queue<TreeNode *> nodes;
+        int depth = 0;
+        
+        nodes.push(root);
+        while (!nodes.empty()) {
+            depth += 1;
+
+            for (int i = 0; i < nodes.size(); ++i) {
+                TreeNode *node = nodes.front();
+                nodes.pop();
+                if (!node->left) {
+                    nodes.push(node->left);
+                }
+                if (!node->right) {
+                    nodes.push(node->right);
+                }
+            }
+        }
+        return depth;
+    }
+};
