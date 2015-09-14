@@ -2,10 +2,9 @@ class Solution {
 public:
     vector<string> binaryTreePaths(TreeNode *root) {
         vector<string> res;
-        if (!root)
-            return res;
         vector<int> path;
         findPaths(root, res, path);
+        return res;
     }
     void findPaths(TreeNode *root, vector<string> &res, vector<int> &path) {
         if (!root)
@@ -15,7 +14,7 @@ public:
         if (!root->left && !root->right) {
             string s;
             for (int i = 0; i < path.size()-1; ++i)
-                s += to_string(path[i]) + '->';
+                s += to_string(path[i]) + "->";
             s += to_string(path[path.size()-1]);
             res.push_back(s);
         }
