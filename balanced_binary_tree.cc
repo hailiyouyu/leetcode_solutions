@@ -37,7 +37,7 @@ public:
             return false;
         
         int diff = left_depth - right_depth;
-        if (diff < -1 && diff > 1)
+        if (diff < -1 || diff > 1)
             return false;
         depth = max(left_depth, right_depth) + 1;
         return true;
