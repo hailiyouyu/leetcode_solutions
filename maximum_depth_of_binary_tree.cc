@@ -54,13 +54,14 @@ class Solution3 {
         while (!nodes.empty()) {
             depth += 1;
 
-            for (int i = 0; i < nodes.size(); ++i) {
+            int n = nodes.size();
+            for (int i = 0; i < n; ++i) {
                 TreeNode *node = nodes.front();
                 nodes.pop();
-                if (!node->left) {
+                if (node->left) {
                     nodes.push(node->left);
                 }
-                if (!node->right) {
+                if (node->right) {
                     nodes.push(node->right);
                 }
             }
