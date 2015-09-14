@@ -14,9 +14,9 @@ public:
                 TreeNode *node = nodes.front();
                 nodes.pop();
                 temp.push_back(node->val);
-                if (!node->left)
+                if (node->left)
                     nodes.push(node->left);
-                if (!node->right)
+                if (node->right)
                     nodes.push(node->right);
             }
             data.push_back(temp);
