@@ -4,14 +4,22 @@ public:
         vector<int> data;
         if (!root)
             return data;
-        while (root) {
-            data.push_back(root->val);
-            if (root->right)
-                root = root->right;
-            else if (!root->left)
-                break;
-            else
-                root = root->left;
+        queue<TreeNode *> nodes;
+        nodes.push(root);
+
+        while (!nodes.empty()) {
+            int n = nodes.size();
+            for (int i = 0; i < n; ++i) {
+                TreeNode *node = nodes.front();
+                nodes.pop();
+
+                if (i == n-1)
+                    data.push_back(node->val);
+                if (node->left)
+                    nodes.push(node->left);
+                if (node->right)
+                    nodes.push(node->right);
+            }
         }
         return data;
     }
