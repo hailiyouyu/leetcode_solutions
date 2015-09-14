@@ -9,7 +9,8 @@ public:
 
         while (!nodes.empty()) {
             vector<int> temp;
-            for (int i = 0; i < nodes.size(); ++i) {
+            int n = nodes.size();
+            for (int i = 0; i < n; ++i) {
                 TreeNode *node = nodes.front();
                 nodes.pop();
                 temp.push_back(node->val);
