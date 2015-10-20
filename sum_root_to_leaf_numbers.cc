@@ -27,7 +27,7 @@ public:
           if (!node.first->left && !node.first->right) {
             int s = 0;
             for (int i = 0; i != path.size(); ++i) {
-              s += 10 * s + path[i];
+              s = 10 * s + path[i];
             }
             sum.push_back(s);
           }
