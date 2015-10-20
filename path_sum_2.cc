@@ -16,16 +16,14 @@ public:
         curPath.push_back(root->val);
         res.push_back(curPath);
         curPath.pop_back();
-        return;
-      } else {
-        return;
       }
+      return;
     }
     curPath.push_back(root->value);
     if (root->left)
-      findPathHelper(root->left, res, curPath, curSum-root->value);
+      findPathHelper(root->left, res, curPath, curSum-root->val);
     if (root->right)
-      findPathHelper(root->right, res, curPath, curSum-root->value);
+      findPathHelper(root->right, res, curPath, curSum-root->val);
     curPath.pop_back();
   }
 };
