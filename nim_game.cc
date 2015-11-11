@@ -14,7 +14,7 @@ public:
 
 class Solution2 {
 public:
-  static bool canWinNim(int n) {
+  bool canWinNim(int n) {
     if (n == 0)
       return false;
     if (n < 3)
