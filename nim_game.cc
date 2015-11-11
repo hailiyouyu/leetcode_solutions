@@ -29,3 +29,10 @@ public:
     return base[2];
   }
 };
+
+class Solution3 {
+public:
+  bool canWinNim(int n) {
+    return n % 4;
+  }
+};
